@@ -111,7 +111,7 @@ nav a:hover {
 /* Main Section Styling */
 .main-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
     margin: 20px auto;
@@ -166,26 +166,65 @@ dd {
     color: #555;
 }
 
-/* Projects Section (if projects were present) */
-.three-col {
+/* Enhanced Projects Section Styling */
+.project-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
 }
 
-.card {
-    background-color: #f9f9f9;
+.project-card {
+    background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card img {
-    max-width: 100%;
-    border-radius: 5px;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:nth-child(even) {
+    background: linear-gradient(to left, #ff7e5f, #feb47b);
+    color: #fff;
+}
+
+.project-card:nth-child(odd) {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+}
+
+.project-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-details h3 {
+    font-size: 1.5em;
     margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-details ul {
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+}
+
+.project-details ul li {
+    margin-bottom: 5px;
 }
 
 /* Horizontal Rule Styling */
